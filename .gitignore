@@ -1,0 +1,5 @@
+log.txt
+index.blue.html
+*.db
+.env
+__pycache__/

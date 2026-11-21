@@ -1,0 +1,12 @@
+[Unit]
+Description=Nagu Sina registration API
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/lera2
+ExecStart=/usr/bin/python3 -m uvicorn server:app --host 127.0.0.1 --port 8095
+EnvironmentFile=-/opt/lera2/.env
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nagu Sina — курсы для взрослых в Таллине</title>
+<link rel="icon" href="/img/favicon.svg?v=4" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico?v=4" sizes="any">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png?v=4">
+<meta name="theme-color" content="#12466a">
+<meta name="description" content="MTÜ Nagu Sina: täienduskoolitused Tallinnas vene keeles / курсы дополнительного обучения в Таллине на русском языке">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--c:#12466a;--c2:#f2a93b;--bg:#f3f7fa;--t:#1c2b36;--m:#5b6b77}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--t);background:#fff;-webkit-font-smoothing:antialiased;letter-spacing:-.005em}
+a{color:var(--c)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}.narrow{max-width:800px}
+header{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid #e3e8ec;z-index:10}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px;flex-wrap:wrap}
+.logo{font-weight:800;font-size:22px;letter-spacing:-.03em;text-decoration:none;color:var(--c);line-height:1.1}
+.logo small{display:block;font-size:12px;font-weight:400;color:var(--m);letter-spacing:0}
+nav{display:flex;gap:4px;flex-wrap:wrap;align-items:center}
+nav a{text-decoration:none;color:var(--t);padding:8px 12px;border-radius:8px;font-size:15px;font-weight:500}
+nav a:hover{background:var(--bg);color:var(--c)}
+nav button{font:inherit;font-size:15px;font-weight:600;border:1px solid var(--c);color:var(--c);background:none;padding:7px 12px;border-radius:8px;margin-left:6px;cursor:pointer}
+nav button.on{background:var(--c);color:#fff}
+#m,.burger{display:none}
+.hero{position:relative;overflow:hidden;color:#fff;padding:130px 0 120px;background:linear-gradient(135deg,#0c3350,#12466a 55%,#1b6a9a)}
+.herobg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,51,80,.85),rgba(12,51,80,.5));z-index:1}
+
+.hero .wrap{position:relative;z-index:2}
+.hero h1{margin:0 0 18px;font-size:clamp(30px,5vw,50px);line-height:1.15;font-weight:800;letter-spacing:-.03em;max-width:800px}
+.herotext{font-size:clamp(17px,2vw,21px);max-width:680px;margin:0 0 28px;opacity:.95}
+.herobtn{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--c2);color:#1b1b1b;padding:14px 28px;border-radius:12px;text-decoration:none;font:inherit;font-weight:600;font-size:16px;border:2px solid var(--c2);cursor:pointer;box-shadow:0 6px 18px rgba(242,169,59,.35);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.light{background:rgba(255,255,255,.15);border-color:#fff;color:#fff;box-shadow:none}
+.btn.ghost{background:none;border-color:var(--c);color:var(--c);box-shadow:none}
+.facts{background:var(--c);color:#fff}
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;padding:30px 20px}
+.grid4 div{display:flex;flex-direction:column}.grid4 b{font-size:28px;font-weight:800;color:var(--c2);line-height:1.1}.grid4 span{font-size:14px;opacity:.9;margin-top:4px}
+h2{font-size:clamp(24px,3vw,32px);margin:56px 0 18px;color:var(--c);font-weight:800;letter-spacing:-.02em}
+h3{margin:0 0 8px;font-size:20px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:24px;margin:24px 0}
+.card{border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 10px 30px rgba(18,70,106,.10);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(18,70,106,.16)}
+.ph{position:relative;height:220px}.ph img{width:100%;height:100%;object-fit:cover;display:block}.ph em{position:absolute;left:14px;top:14px;font-style:normal;font-weight:800;font-size:20px;background:var(--c2);color:#1b1b1b;padding:6px 14px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.pad{padding:18px 20px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h3{font-size:22px;color:var(--c)}.pad p{margin:0;color:var(--m);font-size:16px}
+.meta{display:flex;flex-direction:column;font-size:14px;margin-top:auto}
+.meta span{background:var(--bg);border-radius:8px;padding:6px 10px;margin-top:6px;font-weight:500}
+details{font-size:15px}summary{cursor:pointer;color:var(--c);font-weight:600}
+.card details ul{margin:8px 0;padding-left:18px;color:var(--m)}.card details li{margin:3px 0}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:4px}.row a:not(.btn){font-size:14px}
+.why{background:var(--bg);padding:20px 0 50px;margin-top:50px}.why h2{margin-top:30px}
+.lead{font-size:20px;color:#2b3d4a}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.grid3>div{background:#fff;border:1px solid #e3e8ec;border-radius:16px;padding:22px}
+.grid3 span.n{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--c);color:#fff;font-weight:700;margin-bottom:8px}
+.grid3 p{margin:0;color:var(--m)}
+.faq details{border-radius:14px;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.05);border:1px solid #e3e8ec;margin:10px 0;padding:4px 16px}
+.faq summary{list-style:none;padding:10px 0;color:var(--t)}.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";float:right;font-size:22px;color:var(--c)}.faq details[open] summary:after{content:"–"}
+.faq p{margin:0 0 12px;color:var(--m)}
+.docs{columns:2 300px;column-gap:28px}.docs a{display:block;margin:8px 0;break-inside:avoid;text-decoration:none;padding:10px 14px;border:1px solid #e3e8ec;border-radius:10px;color:var(--c);font-weight:500}.docs a:hover{background:var(--bg)}
+.cta{background:linear-gradient(135deg,var(--c),#1b6a9a);color:#fff;padding:64px 0;margin-top:56px}
+.cta h2{color:#fff;margin:0 0 8px}.cta p{font-size:19px;opacity:.95;margin:0 0 24px}
+.cta .ct{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+form{display:grid;gap:12px}
+input,select,textarea{font:inherit;padding:12px;border:1px solid #c8d1d8;border-radius:10px;width:100%;color:var(--t);background:#fff}
+label.k{font-size:14px;display:flex;gap:8px;align-items:flex-start;opacity:.95}label.k input{width:auto;margin-top:5px}
+#st{min-height:24px;font-weight:600}
+.cta a{color:#fff}
+footer{background:#14303f;color:#d6e0e6;padding:34px 0;font-size:15px}footer a{color:#fff}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.fab{position:fixed;right:18px;bottom:18px;background:var(--c2);color:#1b1b1b;font-weight:700;text-decoration:none;padding:13px 18px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25);z-index:20}
+.hp{position:absolute;left:-9999px}
+@media(max-width:820px){.burger{display:block;font-size:28px;cursor:pointer;padding:0 8px}nav{display:none;width:100%;flex-direction:column;align-items:stretch;padding-bottom:12px}#m:checked~nav{display:flex}.hero{padding:70px 0 60px}.cta .ct{grid-template-columns:1fr}.fab span{display:none}.fab{font-size:20px;padding:14px 16px}nav button{margin:6px 0 0}}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+<a class="logo" href="#top">Nagu Sina<small data-i="sub"></small></a>
+<input type="checkbox" id="m"><label class="burger" for="m">☰</label>
+<nav>
+<a href="#kursused" data-i="n1"></a><a href="#kuidas" data-i="n4"></a><a href="#faq" data-i="n6"></a><a href="#docs" data-i="n5"></a><a href="#reg" data-i="n2"></a>
+<span><button data-l="et">ET</button><button data-l="ru">RU</button></span>
+</nav></div></header>
+
+<main id="top">
+<section class="hero"><img class="herobg" src="img/hero.jpg?v=4" alt="" fetchpriority="high"><div class="wrap">
+<h1 data-i="h1"></h1><p class="herotext" data-i="h1p"></p>
+<div class="herobtn"><a class="btn" href="#kursused" data-i="cta2"></a><a class="btn light" href="#reg" data-i="cta"></a></div>
+</div></section>
+
+<section class="facts"><div class="wrap grid4">
+<div><b>07.12</b><span data-i="f2"></span></div>
+<div><b>140–355</b><span data-i="f1"></span></div>
+<div><b>Tallinn + Zoom</b><span data-i="f3"></span></div>
+<div><b data-i="f4v"></b><span data-i="f4"></span></div>
+</div></section>
+
+<section class="wrap" id="kursused"><h2 data-i="h2"></h2><div class="cards" id="cl"></div></section>
+
+<section class="why"><div class="wrap narrow"><h2 data-i="hw"></h2><p class="lead" data-i="lw"></p></div></section>
+
+<section class="wrap" id="kuidas"><h2 data-i="h5"></h2>
+<div class="grid3">
+<div><span class="n">1</span><h3 data-i="s1t"></h3><p data-i="s1"></p></div>
+<div><span class="n">2</span><h3 data-i="s2t"></h3><p data-i="s2"></p></div>
+<div><span class="n">3</span><h3 data-i="s3t"></h3><p data-i="s3"></p></div>
+<div><span class="n">4</span><h3 data-i="s4t"></h3><p data-i="s4"></p></div>
+</div></section>
+
+<section class="wrap narrow" id="faq"><h2 data-i="n6"></h2><div class="faq" id="fq"></div></section>
+
+<section class="wrap" id="docs"><h2 data-i="h6"></h2><div class="docs" id="dl"></div></section>
+
+<section class="cta" id="reg"><div class="wrap ct">
+<div><h2 data-i="h3"></h2><p data-i="ctap"></p>
+<p><a href="tel:+37257918599">+372 5791 8599</a><br><a href="mailto:valeriaja@icloud.com">valeriaja@icloud.com</a><br>Liimi 1, Tallinn</p></div>
+<form id="f">
+<input name="name" required data-p="fn" autocomplete="name" maxlength="100">
+<input name="phone" type="tel" required data-p="ph" autocomplete="tel" maxlength="30">
+<input name="email" type="email" required data-p="em" autocomplete="email" maxlength="100">
+<select name="course" id="sel" required></select>
+<textarea name="msg" rows="3" data-p="ms" maxlength="1000"></textarea>
+<input class="hp" name="website" tabindex="-1" autocomplete="off">
+<label class="k"><input type="checkbox" required><span data-i="ag"></span></label>
+<button class="btn" type="submit" data-i="sb"></button>
+<div id="st" role="status"></div>
+</form>
+</div></section>
+</main>
+
+<footer><div class="wrap cols">
+<div><b>Mittetulundusühing (MTÜ) NAGU SINA</b><br>Reg. 80600369<br>Liimi 1, Tallinn</div>
+<div><a href="tel:+37257918599">+372 5791 8599</a><br><a href="mailto:valeriaja@icloud.com">valeriaja@icloud.com</a></div>
+</div></footer>
+<a class="fab" href="tel:+37257918599">📞 <span>+372 5791 8599</span></a>
+
+<script>
+const C=[
+{id:"lapsehoidja",h:326,p:2450,d:"07.12.2026 – 15.04.2027",z:1,pdf:"ru-programma-nyanya.pdf",
+ et:["Lapsehoidja / lasteaia õpetaja assistent","Lapse arengu toetamine, hooldus, esmaabi ja kodumajandus. Töö lapsehoidja või lasteaia õpetaja assistendina.","193 t teooria + 120 t praktika lasteaias + 13 t iseseisev töö",
+  ["Lapse kaitse ja sotsiaalkindlustuse alused — 4 t","Töökeskkond — 2 t","Lapsehoidja kutse-eetika — 2 t","Psühholoogia — 35 t","Pedagoogika — 60 t","Laste tervis ja esmaabi — 60 t","Kodumajandus — 30 t","Praktika — 120 t"],
+  "Tunnistus: õppekava täidetud 75% ulatuses, teooria ja praktika test vähemalt 75%. Muidu väljastatakse tõend."],
+ ru:["Помощник воспитателя / Няня","Поддержка развития ребёнка, уход, первая помощь и домохозяйство. Работа няней или помощником воспитателя.","193 ч теории + 120 ч практики в детском саду + 13 ч самостоятельной работы",
+  ["Основы защиты детей и социального обеспечения — 4 ч","Рабочая среда — 2 ч","Профессиональная этика для няни — 2 ч","Психология — 35 ч","Педагогика — 60 ч","Здоровье детей и первая помощь — 60 ч","Домохозяйство — 30 ч","Практика — 120 ч"],
+  "Свидетельство: программа выполнена на 75%, зачёт по теории и практике не менее 75%. Иначе выдаётся справка."]},
+{id:"abikokk",h:200,p:2400,d:"07.12.2026 – 19.02.2027",pdf:"programma-abikokk.pdf",
+ et:["Abikokk","Toiduhügieen, köögiseadmed, toorained, kuumtöötlus, kastmed. Töö restoranis või suurköögis.","80 t teooria + 100 t praktika restoranis + 20 t iseseisev töö",
+  ["Toiduhügieen ja köögiohutus — 12 t","Köögiseadmed ja -tarbed — 6 t","Suur- ja restoraniköögid — 12 t","Tervislik toitumine, toit kui kaup — 9 t","Puhastamine ja sanitaartingimused — 8 t","Toorained, pooltooted, kuumtöötlus — 17 t","Esmane töötlemine, viilutamine, kastmed — 12 t","Protsessiskeemid, Eesti rahvamenüü — 10 t","Praktika restoranis — 100 t"],
+  "Tunnistus: õppekava täidetud 75% ulatuses ja test sooritatud. Muidu väljastatakse tõend."],
+ ru:["Помощник повара","Пищевая гигиена, оборудование кухни, сырьё, тепловая обработка, соусы. Работа в ресторане или на большой кухне.","80 ч теории + 100 ч практики в ресторане + 20 ч самостоятельной работы",
+  ["Пищевая гигиена и безопасность на кухне — 12 ч","Оборудование и инвентарь кухни — 6 ч","Большая кухня и кухня ресторана — 12 ч","Здоровое питание, пища как товар — 9 ч","Уборка и чистка — 8 ч","Сырьё, полуфабрикаты, тепловая обработка — 17 ч","Первичная обработка, нарезка, соусы — 12 ч","Технологические карты, национальное меню Эстонии — 10 ч","Практика в ресторане — 100 ч"],
+  "Свидетельство: программа выполнена на 75%, тест сдан. Иначе выдаётся справка."]},
+{id:"hooldustootaja",h:355,p:2490,d:"07.12.2026 – 08.04.2027",z:1,pdf:"programma-hooldustootaja.pdf",
+ et:["Hooldustöötaja","Eakate, puuetega ja erivajadustega inimeste hooldus hooldusplaani alusel. Sisaldab esmaabi tunnistust.","210 t teooria + 120 t praktika + 25 t iseseisev töö",
+  ["Suhtlemine, kutse-eetika, töökeskkond — 22 t","Arengupsühholoogia, suhtlemispsühholoogia — 26 t","Hoolduse alused, anatoomia ja patoloogia — 26 t","Laste hoolekanne — 22 t","Gerontoloogia ja eaka hooldus — 15 t","Erivajadustega inimeste hooldus — 15 t","Hooldus haiguste korral, abivahendid — 20 t","Ergonoomika, toitumisõpetus, ravimiõpetus — 44 t","Surija hooldus — 4 t","Esmaabi (tunnistus) — 16 t","Praktika — 120 t"],
+  "Tunnistus: osalus vähemalt 70% kontakttundides, teooriatest ja praktika vähemalt 75%. Muidu väljastatakse tõend."],
+ ru:["Работник по уходу","Уход за пожилыми, людьми с инвалидностью и особыми потребностями по плану ухода. Включает свидетельство по первой помощи.","210 ч теории + 120 ч практики + 25 ч самостоятельной работы",
+  ["Общение, профессиональная этика, рабочая среда — 22 ч","Психология развития и общения — 26 ч","Основы ухода, анатомия и патология — 26 ч","Уход за детьми — 22 ч","Геронтология и уход за пожилыми — 15 ч","Уход за людьми с особыми потребностями — 15 ч","Уход при заболеваниях, вспомогательные средства — 20 ч","Эргономика, питание, фармакология — 44 ч","Уход за умирающими — 4 ч","Первая помощь (свидетельство) — 16 ч","Практика — 120 ч"],
+  "Свидетельство: не менее 70% контактных занятий, тест по теории и практика не менее 75%. Иначе выдаётся справка."]},
+{id:"puhastusteenindaja",h:140,p:2300,d:"07.12.2026 – 05.02.2027",pdf:"programma-puhastusteenindaja.pdf",
+ et:["Puhastusteenindaja (tase 3)","Koristustehnoloogia, puhastusvahendid ja seadmed, ohutus. Võimalus tõsta kvalifikatsiooni superviisori tasemele.","50 t teooria + 70 t praktika + 20 t iseseisev töö",
+  ["Erialaga tutvumine — 20 t","Tööks ettevalmistamine — 30 t","Profülaktiline ja põhjalik koristus — 30 t","Suhtlemine, meeskonnatöö, klienditeenindus — 10 t","Oskuste lihvimine — 50 t"],
+  "Tunnistus: osalus vähemalt 75%, lõpueksam (test ja praktiline ülesanne) vähemalt 75%. Osalus vähemalt 50% — tõend."],
+ ru:["Специалист по уборке (уровень 3)","Технологии уборки, чистящие средства и оборудование, безопасность. Возможность повысить квалификацию до супервайзера.","50 ч теории + 70 ч практики + 20 ч самостоятельной работы",
+  ["Вводный — 20 ч","Подготовка к работе — 30 ч","Профилактическая и генеральная уборка — 30 ч","Коммуникация, работа в команде, работа с клиентом — 10 ч","Отработка навыков — 50 ч"],
+  "Свидетельство: участие не менее 75%, итоговый экзамен (тест и практическое задание) не менее 75%. Участие от 50% — справка."]},
+{id:"tugiisik",h:310,p:2450,d:"07.12.2026 – 19.03.2027",pdf:"programma-tugiisik.pdf",
+ et:["Tugiisik","Töö kriisis olevate laste ja täiskasvanutega: psühholoogia, õigus, konfliktilahendus, esmaabi.","160 t teooria + 100 t praktika + 50 t iseseisev töö",
+  ["Tugiisiku teenuse alused, kutse-eetika, tööõigus — 12 t","Arengu- ja suhtlemispsühholoogia — 16 t","Seadusandlus ja laste õiguste kaitse — 6 t","Töö väärkoheldud isikuga, konfliktide lahendamine — 30 t","Kliendi toetamine, pere nõustamine — 30 t","Töö abivajadusega lapsega — 30 t","Töö sõltuvushäirega isikuga — 12 t","Võrgustikutöö — 8 t","Esmaabi — 16 t","Praktika — 100 t"],
+  "Tunnistus: osalus vähemalt 70% kontakttundides, teooria ja praktika vähemalt 70%. Muidu väljastatakse tõend."],
+ ru:["Опорное лицо","Работа с детьми и взрослыми в кризисных ситуациях: психология, право, разрешение конфликтов, первая помощь.","160 ч теории + 100 ч практики + 50 ч самостоятельной работы",
+  ["Основы услуги, профессиональная этика, трудовое право — 12 ч","Возрастная психология и психология общения — 16 ч","Социальная политика, защита детей — 6 ч","Недостойное обращение, насилие и его предотвращение — 30 ч","Общение с клиентами, консультирование, поддержка семей — 30 ч","Проблемное поведение у детей, развитие ребёнка — 30 ч","Зависимое поведение — 12 ч","Сетевая работа и работа с компьютером — 8 ч","Первая помощь — 16 ч","Практика — 100 ч"],
+  "Свидетельство: не менее 70% контактных занятий, тест по теории и практика не менее 70%. Иначе выдаётся справка."]}];
+
+const D={
+et:[["Õppekeskkonna kirjeldus","et-oppekeskkond.pdf"],["Õppekavade kvaliteedi tagamise kord","et-oppekavade-kvaliteet.pdf"],["Koolitajate kvaliteedi tagamise tingimused ja kord","et-koolitajate-kvaliteet.pdf"],["Õppijate koolituselt väljaarvamise tingimused ja kord","et-valjaarvamine.pdf"],["Õppetasust vabastamise ja õppetasu tagastamise kord","et-oppetasu-tagastamine.pdf"]],
+ru:[["Описание учебной среды","ru-uchebnaya-sreda.pdf"],["Порядок обеспечения качества учебной среды","ru-kachestvo-sredy.pdf"],["Порядок обеспечения качества учебных программ","ru-kachestvo-programm.pdf"],["Условия и порядок отчисления обучающихся","ru-otchislenie.pdf"],["Порядок освобождения от оплаты и возврата стоимости обучения","ru-vozvrat.pdf"]]};
+
+const T={
+et:{n1:"Kursused",n2:"Registreerumine",n3:"Info",n4:"Kuidas õppida",n5:"Dokumendid",
+h1:"Täienduskoolitused Tallinnas",h1p:"Praktilised kursused vene keeles. Kursuse lõpus tunnistus, igale õppijale praktikakoht ja abi töö leidmisel.",
+cta:"Registreeru",cta2:"Vaata kursusi",f1:"kursust",f2:"koolituste algus",f3v:"Praktika",f3:"tagatud igale õppijale",
+h2:"Kursused",h3:"Registreerumine kursusele",h4:"Õppekorraldus",h5:"Kuidas see toimib",h6:"Dokumendid",
+s1t:"Registreeru",s1:"Täida avaldus saidil või helista +372 5791 8599.",
+s2t:"Dokumendid",s2:"Avaldus ja isikut tõendav dokument.",
+s3t:"Õpe",s3:"Teooria klassis Liimi 1 (osa kursustest ka Zoomis) ja praktika.",
+s4t:"Tunnistus",s4:"Test, praktika ja tunnistus. Aitame töö leidmisel.",
+fn:"Nimi",ph:"Telefon",em:"E-post",ms:"Küsimus (valikuline)",ag:"Nõustun isikuandmete töötlemisega registreerumise eesmärgil.",sb:"Saada avaldus",
+ok:"Aitäh! Avaldus on vastu võetud. Saatke ka avanenud e-kiri, siis vastame kiiremini.",er:"Viga. Helistage +372 5791 8599.",
+h:"akad. tundi",pl:"Liimi 1, Tallinn",ln:"Õppekeel: vene",rg:"Registreeru",pr:"Programm",pd:"Programm (PDF, ET/RU)",
+i1t:"Õppekeskkond",i1:"Klassiruumid vastavad töötervishoiu nõuetele, kaasaegne esitlustehnika, paberkandjal jaotusmaterjal, internet igaühele, tee/kohvi paus igal õppepäeval.",
+i2t:"Tagastus",i2:"Õppetasu tagastatakse täielikult, kui loobute enne koolituse algust ja kulusid pole tekkinud. Pärast algust üldjuhul ei tagastata. Kui kursus jääb ära meie poolt, tagastame kogu summa 14 päeva jooksul.",
+i3t:"Väljaarvamine",i3:"Väljaarvamine on võimalik omal soovil, rikkumise või õppekava mittetäitmise korral. Otsuse teeb õppekeskuse juht.",
+i4t:"Kaebused",i4:"Ettepanekud ja kaebused esitatakse üldjuhul kirjalikult. Vaidlused lahendame läbirääkimistel.",
+trt:"Koolitajad",tr1:"haridusalane taust, töökogemus lastega, lõpetanud Peterburi Riikliku Ülikooli.",tr2:"meditsiinispetsialist, Punase Risti esmaabikoolitaja, litsentseeritud toiduhügieeni koolitaja.",tr3:"psühholoog, psühholoogia õpetaja."},
+ru:{n1:"Курсы",n2:"Регистрация",n3:"Информация",n4:"Как проходит обучение",n5:"Документы",
+h1:"Курсы дополнительного обучения в Таллине",h1p:"Практические курсы на русском языке. По окончании свидетельство, место практики для каждого ученика и помощь с трудоустройством.",
+cta:"Записаться",cta2:"Смотреть курсы",f1:"курсов",f2:"начало обучения",f3v:"Практика",f3:"гарантирована каждому ученику",
+h2:"Курсы",h3:"Регистрация на курс",h4:"Организация обучения",h5:"Как это работает",h6:"Документы",
+s1t:"Запишитесь",s1:"Заполните заявку на сайте или позвоните +372 5791 8599.",
+s2t:"Документы",s2:"Заявление и документ, удостоверяющий личность.",
+s3t:"Обучение",s3:"Теория в аудитории на Liimi 1 (часть курсов также в Zoom) и практика.",
+s4t:"Свидетельство",s4:"Тест, практика и свидетельство. Помогаем с трудоустройством.",
+fn:"Имя",ph:"Телефон",em:"E-mail",ms:"Вопрос (необязательно)",ag:"Согласен на обработку персональных данных для целей регистрации.",sb:"Отправить заявку",
+ok:"Спасибо! Заявка принята. Отправьте и открывшееся письмо, так мы ответим быстрее.",er:"Ошибка. Позвоните +372 5791 8599.",
+h:"ак. часов",pl:"Liimi 1, Таллин",ln:"Язык обучения: русский",rg:"Записаться",pr:"Программа",pd:"Программа (PDF, ET/RU)",
+i1t:"Учебная среда",i1:"Аудитории соответствуют требованиям охраны труда, современная техника, раздаточные материалы на бумаге, интернет для каждого, перерыв на чай/кофе в каждый учебный день.",
+i2t:"Возврат",i2:"Стоимость возвращается полностью при отказе до начала курса, если расходов ещё не было. После начала, как правило, не возвращается. Если курс отменяем мы, вернём всю сумму в течение 14 дней.",
+i3t:"Отчисление",i3:"Отчисление возможно по собственному заявлению, при нарушениях или невыполнении программы. Решение принимает руководитель центра.",
+i4t:"Жалобы",i4:"Предложения и жалобы, как правило, подаются письменно. Споры решаем путём переговоров.",
+trt:"Преподаватели",tr1:"педагогическое образование, опыт работы с детьми, выпускница Санкт-Петербургского государственного университета.",tr2:"специалист в медицине, преподаватель первой помощи Красного Креста, лицензированный преподаватель пищевой гигиены.",tr3:"психолог, преподаватель психологии."}};
+
+
+const I=[];
+const P=[["nyanya.jpg","center"],["povar.jpg","center"],["uhod.jpg","center"],["uborka.jpg","center 72%"],["podderzhka.jpg","center"]];
+const S=["<svg viewBox=\"0 0 600 300\" preserveAspectRatio=\"xMidYMid slice\" role=\"img\" aria-hidden=\"true\"><defs><linearGradient id=\"g1\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0\" stop-color=\"#1b6a9a\"/><stop offset=\"1\" stop-color=\"#0c3350\"/></linearGradient></defs><rect width=\"600\" height=\"300\" fill=\"url(#g1)\"/><circle cx=\"500\" cy=\"70\" r=\"95\" fill=\"#f2a93b\" opacity=\".22\"/><circle cx=\"80\" cy=\"260\" r=\"130\" fill=\"#fff\" opacity=\".06\"/><rect y=\"252\" width=\"600\" height=\"48\" fill=\"#0c3350\" opacity=\".55\"/><circle cx=\"170\" cy=\"120\" r=\"30\" fill=\"#f2a93b\"/><path d=\"M170 150 L200 252\" stroke=\"#fff\" opacity=\".6\" stroke-width=\"2\" fill=\"none\"/><rect x=\"240\" y=\"130\" width=\"80\" height=\"125\" rx=\"36\" fill=\"#fff\"/><path d=\"M318 175 L352 205\" stroke=\"#f6c8a0\" stroke-width=\"13\" stroke-linecap=\"round\"/><circle cx=\"280\" cy=\"105\" r=\"32\" fill=\"#f6c8a0\"/><path d=\"M248 102 a32 32 0 0 1 64 0 q-32 -24 -64 0z\" fill=\"#5a3a22\"/><path d=\"M270 116 q10 8 20 0\" stroke=\"#a8633a\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><rect x=\"350\" y=\"192\" width=\"52\" height=\"64\" rx=\"22\" fill=\"#f2a93b\"/><circle cx=\"376\" cy=\"172\" r=\"24\" fill=\"#f6c8a0\"/><path d=\"M353 168 a23 23 0 0 1 46 0 q-23 -14 -46 0z\" fill=\"#3a2a1e\"/><rect x=\"432\" y=\"222\" width=\"34\" height=\"34\" rx=\"5\" fill=\"#fff\"/><rect x=\"468\" y=\"222\" width=\"34\" height=\"34\" rx=\"5\" fill=\"#f2a93b\"/><rect x=\"450\" y=\"188\" width=\"34\" height=\"34\" rx=\"5\" fill=\"#6fb1d9\"/></svg>", "<svg viewBox=\"0 0 600 300\" preserveAspectRatio=\"xMidYMid slice\" role=\"img\" aria-hidden=\"true\"><defs><linearGradient id=\"g2\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0\" stop-color=\"#1b6a9a\"/><stop offset=\"1\" stop-color=\"#0c3350\"/></linearGradient></defs><rect width=\"600\" height=\"300\" fill=\"url(#g2)\"/><circle cx=\"500\" cy=\"70\" r=\"95\" fill=\"#f2a93b\" opacity=\".22\"/><circle cx=\"80\" cy=\"260\" r=\"130\" fill=\"#fff\" opacity=\".06\"/><rect y=\"232\" width=\"600\" height=\"68\" fill=\"#0c3350\" opacity=\".6\"/><path d=\"M440 175 q-14 -20 0 -38 q14 -18 0 -38\" stroke=\"#fff\" opacity=\".5\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M480 180 q-14 -20 0 -38 q14 -18 0 -38\" stroke=\"#fff\" opacity=\".4\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/><rect x=\"418\" y=\"190\" width=\"104\" height=\"46\" rx=\"9\" fill=\"#c9d6df\"/><rect x=\"404\" y=\"200\" width=\"20\" height=\"9\" rx=\"4\" fill=\"#c9d6df\"/><rect x=\"516\" y=\"200\" width=\"20\" height=\"9\" rx=\"4\" fill=\"#c9d6df\"/><rect x=\"418\" y=\"190\" width=\"104\" height=\"9\" rx=\"4\" fill=\"#fff\"/><rect x=\"248\" y=\"140\" width=\"104\" height=\"122\" rx=\"32\" fill=\"#fff\"/><circle cx=\"300\" cy=\"112\" r=\"30\" fill=\"#f6c8a0\"/><path d=\"M286 124 q14 9 28 0\" stroke=\"#a8633a\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><rect x=\"268\" y=\"62\" width=\"64\" height=\"30\" rx=\"6\" fill=\"#fff\"/><circle cx=\"278\" cy=\"62\" r=\"19\" fill=\"#fff\"/><circle cx=\"300\" cy=\"52\" r=\"21\" fill=\"#fff\"/><circle cx=\"322\" cy=\"62\" r=\"19\" fill=\"#fff\"/><path d=\"M272 146 L300 176 L328 146z\" fill=\"#f2a93b\"/><path d=\"M350 190 L412 214\" stroke=\"#f6c8a0\" stroke-width=\"13\" stroke-linecap=\"round\"/><polygon points=\"110,222 180,236 110,250\" fill=\"#f2a93b\"/><path d=\"M108 228 l-14 -8 M108 236 l-16 0 M108 244 l-14 8\" stroke=\"#7bc47f\" stroke-width=\"4\" stroke-linecap=\"round\"/></svg>", "<svg viewBox=\"0 0 600 300\" preserveAspectRatio=\"xMidYMid slice\" role=\"img\" aria-hidden=\"true\"><defs><linearGradient id=\"g3\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0\" stop-color=\"#1b6a9a\"/><stop offset=\"1\" stop-color=\"#0c3350\"/></linearGradient></defs><rect width=\"600\" height=\"300\" fill=\"url(#g3)\"/><circle cx=\"500\" cy=\"70\" r=\"95\" fill=\"#f2a93b\" opacity=\".22\"/><circle cx=\"80\" cy=\"260\" r=\"130\" fill=\"#fff\" opacity=\".06\"/><rect y=\"252\" width=\"600\" height=\"48\" fill=\"#0c3350\" opacity=\".55\"/><path d=\"M300 92 C258 62 274 32 300 50 C326 32 342 62 300 92z\" fill=\"#f2a93b\"/><rect x=\"188\" y=\"152\" width=\"72\" height=\"104\" rx=\"30\" fill=\"#9fc3de\"/><circle cx=\"224\" cy=\"124\" r=\"28\" fill=\"#f6c8a0\"/><path d=\"M196 122 a28 28 0 0 1 56 0 q-28 -20 -56 0z\" fill=\"#e6e9ec\"/><path d=\"M214 134 q10 7 20 0\" stroke=\"#a8633a\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M268 200 L278 258\" stroke=\"#f2a93b\" stroke-width=\"7\" stroke-linecap=\"round\"/><path d=\"M268 200 q-8 -8 -2 -16\" stroke=\"#f2a93b\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M324 190 L262 198\" stroke=\"#f6c8a0\" stroke-width=\"13\" stroke-linecap=\"round\"/><rect x=\"318\" y=\"134\" width=\"84\" height=\"124\" rx=\"34\" fill=\"#fff\"/><circle cx=\"360\" cy=\"106\" r=\"30\" fill=\"#f6c8a0\"/><path d=\"M330 104 a30 30 0 0 1 60 0 q-30 -22 -60 0z\" fill=\"#5a3a22\"/><path d=\"M349 118 q11 8 22 0\" stroke=\"#a8633a\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/></svg>", "<svg viewBox=\"0 0 600 300\" preserveAspectRatio=\"xMidYMid slice\" role=\"img\" aria-hidden=\"true\"><defs><linearGradient id=\"g4\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0\" stop-color=\"#1b6a9a\"/><stop offset=\"1\" stop-color=\"#0c3350\"/></linearGradient></defs><rect width=\"600\" height=\"300\" fill=\"url(#g4)\"/><circle cx=\"500\" cy=\"70\" r=\"95\" fill=\"#f2a93b\" opacity=\".22\"/><circle cx=\"80\" cy=\"260\" r=\"130\" fill=\"#fff\" opacity=\".06\"/><rect y=\"252\" width=\"600\" height=\"48\" fill=\"#0c3350\" opacity=\".55\"/><polygon points=\"400,194 504,194 488,258 416,258\" fill=\"#f2a93b\"/><rect x=\"394\" y=\"186\" width=\"116\" height=\"11\" rx=\"5\" fill=\"#fff\"/><path d=\"M412 186 q40 -50 80 0\" stroke=\"#fff\" stroke-width=\"5\" fill=\"none\"/><path d=\"M262 60 L306 232\" stroke=\"#c9d6df\" stroke-width=\"9\" stroke-linecap=\"round\"/><rect x=\"272\" y=\"226\" width=\"78\" height=\"30\" rx=\"9\" fill=\"#fff\"/><path d=\"M280 256 v10 M296 256 v12 M312 256 v10 M328 256 v12 M344 256 v10\" stroke=\"#fff\" stroke-width=\"5\" stroke-linecap=\"round\"/><rect x=\"124\" y=\"172\" width=\"54\" height=\"86\" rx=\"12\" fill=\"#6fb1d9\"/><rect x=\"134\" y=\"148\" width=\"32\" height=\"28\" rx=\"5\" fill=\"#fff\"/><path d=\"M166 156 h22 v10\" stroke=\"#fff\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M80 100 l7 -20 l7 20 l20 7 l-20 7 l-7 20 l-7 -20 l-20 -7z\" fill=\"#fff\"/><path d=\"M200 60 l5 -13 l5 13 l13 5 l-13 5 l-5 13 l-5 -13 l-13 -5z\" fill=\"#f2a93b\"/><path d=\"M520 150 l4 -10 l4 10 l10 4 l-10 4 l-4 10 l-4 -10 l-10 -4z\" fill=\"#fff\"/><circle cx=\"190\" cy=\"215\" r=\"9\" fill=\"#fff\" opacity=\".55\"/><circle cx=\"212\" cy=\"196\" r=\"6\" fill=\"#fff\" opacity=\".45\"/></svg>", "<svg viewBox=\"0 0 600 300\" preserveAspectRatio=\"xMidYMid slice\" role=\"img\" aria-hidden=\"true\"><defs><linearGradient id=\"g5\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0\" stop-color=\"#1b6a9a\"/><stop offset=\"1\" stop-color=\"#0c3350\"/></linearGradient></defs><rect width=\"600\" height=\"300\" fill=\"url(#g5)\"/><circle cx=\"500\" cy=\"70\" r=\"95\" fill=\"#f2a93b\" opacity=\".22\"/><circle cx=\"80\" cy=\"260\" r=\"130\" fill=\"#fff\" opacity=\".06\"/><rect y=\"252\" width=\"600\" height=\"48\" fill=\"#0c3350\" opacity=\".55\"/><path d=\"M300 24 L352 44 V94 C352 126 326 142 300 152 C274 142 248 126 248 94 V44z\" fill=\"#f2a93b\"/><path d=\"M276 88 l18 18 l32 -36\" stroke=\"#fff\" stroke-width=\"10\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><rect x=\"170\" y=\"176\" width=\"74\" height=\"82\" rx=\"30\" fill=\"#fff\"/><circle cx=\"207\" cy=\"152\" r=\"26\" fill=\"#f6c8a0\"/><path d=\"M181 150 a26 26 0 0 1 52 0 q-26 -18 -52 0z\" fill=\"#5a3a22\"/><rect x=\"356\" y=\"182\" width=\"72\" height=\"76\" rx=\"30\" fill=\"#6fb1d9\"/><circle cx=\"392\" cy=\"158\" r=\"26\" fill=\"#f6c8a0\"/><path d=\"M366 156 a26 26 0 0 1 52 0 q-26 -18 -52 0z\" fill=\"#3a2a1e\"/><path d=\"M240 220 L358 224\" stroke=\"#f6c8a0\" stroke-width=\"13\" stroke-linecap=\"round\"/></svg>"];
+Object.assign(T.et,{f1:"akadeemilist tundi praktikat ja teooriat",f3:"kohapeal ja veebis",sub:"Koolituskeskus täiskasvanutele Tallinnas",n6:"KKK",hw:"Miks Nagu Sina",lw:"Praktika igal kursusel, kogemustega koolitajad, abi töö leidmisel. Kursused on vene keeles, teooria Liimi 1 ruumides ja osaliselt Zoomis.",f4v:"0",f4:"kogemust pole vaja, õpetame nullist",ctap:"Jäta avaldus, helistame ja kinnitame koha grupis.",
+ faq:[["Kes saab kursustele registreeruda?","Õppida saavad kõik täiskasvanud, kes soovivad uut elukutset. Mõne kursuse jaoks on vaja põhiharidust."],["Kuidas registreerumine käib?","Täida avaldus saidil, helista või kirjuta e-postile. Kinnitame koha grupis. Alguses on vaja avaldust ja isikut tõendavat dokumenti."],["Kas kogemust on vaja?","Ei, õpetame nullist."],["Kas lõpetamisel väljastatakse dokument?","Jah. Kui õppekava tingimused on täidetud, väljastatakse tunnistus, muidu tõend osalemise kohta."],["Kus toimuvad tunnid?","Tallinnas, Liimi 1. Osa kursusi ka veebis Zoomis."]]});
+Object.assign(T.ru,{f1:"академических часов практики и теории",f3:"очно и онлайн",sub:"Учебный центр для взрослых в Таллине",n6:"Вопросы",hw:"Почему Nagu Sina",lw:"Практика на каждом курсе, преподаватели-практики, помощь в поиске работы. Курсы на русском языке, теория на Liimi 1 и частично в Zoom.",f4v:"0",f4:"опыт не нужен, учим с нуля",ctap:"Оставьте заявку, мы позвоним и подтвердим место в группе.",
+ faq:[["Кто может поступить на курсы?","Обучение доступно всем взрослым, желающим получить новую профессию. Для некоторых курсов нужно основное образование."],["Как проходит запись?","Заполните заявку на сайте, позвоните или напишите на e-mail. Мы подтвердим место в группе. При старте нужны заявление и документ, удостоверяющий личность."],["Нужен ли опыт работы?","Нет, учим с нуля."],["Выдаются ли документы об окончании?","Да. При выполнении условий программы выдаётся свидетельство, иначе справка об участии."],["Где проходят занятия?","В Таллине, Liimi 1. Часть курсов также онлайн в Zoom."]]});
+let L="ru";
+try{L=localStorage.getItem("l")||((navigator.language||"").toLowerCase().startsWith("et")?"et":"ru")}catch(e){}
+const esc=s=>s.replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+function r(){const t=T[L];document.documentElement.lang=L;
+document.querySelectorAll("[data-i]").forEach(e=>e.textContent=t[e.dataset.i]);
+document.querySelectorAll("[data-p]").forEach(e=>e.placeholder=t[e.dataset.p]);
+document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("on",b.dataset.l===L));
+document.getElementById("cl").innerHTML=C.map((c,k)=>{const x=c[L];return `<article class="card"><div class="ph"><img src="img/${P[k][0]}" alt="${esc(x[0])}" loading="lazy" style="object-position:${P[k][1]}"><em>${c.p} €</em></div><div class="pad"><h3>${esc(x[0])}</h3><p>${esc(x[1])}</p>
+<div class="meta"><span>⏱ ${c.h} ${t.h}</span><span>📅 ${c.d}</span><span>📍 ${t.pl}${c.z?" / Zoom":""}</span></div>
+<details><summary>${t.pr}</summary><ul>${x[3].map(m=>`<li>${esc(m)}</li>`).join("")}</ul><p style="font-size:14px">${esc(x[2])}. ${esc(x[4])}</p></details>
+<div class="row"><a class="btn" href="#reg" data-c="${c.id}">${t.rg}</a><a href="docs/${c.pdf}" target="_blank" rel="noopener">${t.pd}</a></div></div></article>`}).join("");
+document.querySelectorAll("[data-c]").forEach(a=>a.onclick=()=>{document.getElementById("sel").value=a.dataset.c});
+const s=document.getElementById("sel"),v=s.value;
+s.innerHTML=C.map(c=>`<option value="${c.id}">${esc(c[L][0])} (${c.p} €)</option>`).join("");if(v)s.value=v;
+document.getElementById("dl").innerHTML=D[L].map(d=>`<a href="docs/${d[1]}" target="_blank" rel="noopener">📄 ${esc(d[0])}</a>`).join("");
+document.getElementById("fq").innerHTML=t.faq.map(q=>`<details><summary>${esc(q[0])}</summary><p>${esc(q[1])}</p></details>`).join("");
+document.title="Nagu Sina — "+(L==="et"?"kursused täiskasvanutele Tallinnas":"курсы для взрослых в Таллине")}
+document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{L=b.dataset.l;try{localStorage.setItem("l",L)}catch(e){}r()});
+document.querySelectorAll("nav a").forEach(a=>a.onclick=()=>{document.getElementById("m").checked=false});
+document.getElementById("f").onsubmit=async e=>{e.preventDefault();const st=document.getElementById("st");
+const d=Object.fromEntries(new FormData(e.target));d.lang=L;
+try{const x=await fetch("/api/register",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(d)});
+if(!x.ok)throw 0;st.textContent=T[L].ok;
+const cs=document.getElementById("sel"),cn=cs.options[cs.selectedIndex]?cs.options[cs.selectedIndex].text:d.course;
+const sb=(L==="et"?"Avaldus: ":"Заявка: ")+cn+" — "+d.name;
+const bd=(L==="et"?"Nimi":"Имя")+": "+d.name+"\n"+(L==="et"?"Telefon":"Телефон")+": "+d.phone+"\nE-mail: "+d.email+"\n"+(L==="et"?"Kursus":"Курс")+": "+cn+(d.msg?"\n\n"+d.msg:"");
+location.href="mailto:valeriaja@icloud.com?subject="+encodeURIComponent(sb)+"&body="+encodeURIComponent(bd);
+e.target.reset()}catch(_){st.textContent=T[L].er}};
+r();
+</script>
+</body>
+</html>

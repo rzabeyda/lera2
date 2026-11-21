@@ -1,5 +1,6 @@
 log.txt
 index.blue.html
+_to_delete/
 *.db
 .env
 __pycache__/

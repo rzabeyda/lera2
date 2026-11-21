@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nagu Sina — курсы для взрослых в Таллине</title>
-<link rel="icon" href="/img/favicon.svg?v=4" type="image/svg+xml">
-<link rel="icon" href="/favicon.ico?v=4" sizes="any">
-<link rel="apple-touch-icon" href="/img/apple-touch-icon.png?v=4">
+<title>Kompass — курсы для взрослых в Таллине</title>
+<link rel="icon" href="/favicon.ico?v=5" sizes="any">
+<link rel="icon" href="/img/favicon-64.png?v=5" type="image/png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png?v=5">
 <meta name="theme-color" content="#12466a">
 <meta name="description" content="MTÜ Nagu Sina: täienduskoolitused Tallinnas vene keeles / курсы дополнительного обучения в Таллине на русском языке">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,8 +19,8 @@ a{color:var(--c)}
 .wrap{max-width:1100px;margin:0 auto;padding:0 20px}.narrow{max-width:800px}
 header{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid #e3e8ec;z-index:10}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px;flex-wrap:wrap}
-.logo{font-weight:800;font-size:22px;letter-spacing:-.03em;text-decoration:none;color:var(--c);line-height:1.1}
-.logo small{display:block;font-size:12px;font-weight:400;color:var(--m);letter-spacing:0}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;letter-spacing:.06em;text-decoration:none;color:#123f66;line-height:1}.logo img{height:44px;width:auto;display:block}
+.logo small{display:block;margin-top:4px;font-size:10.5px;font-weight:700;color:#b8923f;letter-spacing:.18em}
 nav{display:flex;gap:4px;flex-wrap:wrap;align-items:center}
 nav a{text-decoration:none;color:var(--t);padding:8px 12px;border-radius:8px;font-size:15px;font-weight:500}
 nav a:hover{background:var(--bg);color:var(--c)}
@@ -83,7 +83,7 @@ footer{background:#14303f;color:#d6e0e6;padding:34px 0;font-size:15px}footer a{c
 </head>
 <body>
 <header><div class="wrap bar">
-<a class="logo" href="#top">Nagu Sina<small data-i="sub"></small></a>
+<a class="logo" href="#top"><img src="img/logo.png?v=5" alt="Kompass" width="53" height="44"><span>KOMPASS<small>KOOLITUSKESKUS</small></span></a>
 <input type="checkbox" id="m"><label class="burger" for="m">☰</label>
 <nav>
 <a href="#kursused" data-i="n1"></a><a href="#kuidas" data-i="n4"></a><a href="#faq" data-i="n6"></a><a href="#docs" data-i="n5"></a><a href="#reg" data-i="n2"></a>
@@ -242,7 +242,7 @@ const s=document.getElementById("sel"),v=s.value;
 s.innerHTML=C.map(c=>`<option value="${c.id}">${esc(c[L][0])} (${c.p} €)</option>`).join("");if(v)s.value=v;
 document.getElementById("dl").innerHTML=D[L].map(d=>`<a href="docs/${d[1]}" target="_blank" rel="noopener">📄 ${esc(d[0])}</a>`).join("");
 document.getElementById("fq").innerHTML=t.faq.map(q=>`<details><summary>${esc(q[0])}</summary><p>${esc(q[1])}</p></details>`).join("");
-document.title="Nagu Sina — "+(L==="et"?"kursused täiskasvanutele Tallinnas":"курсы для взрослых в Таллине")}
+document.title="Kompass — "+(L==="et"?"kursused täiskasvanutele Tallinnas":"курсы для взрослых в Таллине")}
 document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{L=b.dataset.l;try{localStorage.setItem("l",L)}catch(e){}r()});
 document.querySelectorAll("nav a").forEach(a=>a.onclick=()=>{document.getElementById("m").checked=false});
 document.getElementById("f").onsubmit=async e=>{e.preventDefault();const st=document.getElementById("st");

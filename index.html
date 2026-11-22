@@ -18,11 +18,13 @@ body{margin:0;font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Ari
 a{color:var(--c)}
 .wrap{max-width:1100px;margin:0 auto;padding:0 20px}.narrow{max-width:800px}
 header{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid #f0dcea;z-index:10}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px;flex-wrap:wrap}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px;flex-wrap:wrap;padding:8px 0}
 .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;letter-spacing:.06em;text-decoration:none;color:#82027d;line-height:1}.logo img{height:52px;width:auto;display:block}
 .logo small{display:block;margin-top:4px;font-size:10.5px;font-weight:700;color:#e6007a;letter-spacing:.18em}
+.logo em{display:block;margin-top:4px;font-style:normal;font-size:11px;font-weight:500;color:var(--m);letter-spacing:0;line-height:1.35}.logo em i{display:block;font-style:normal}
+.logo{min-width:0;flex:0 1 auto}
 nav{display:flex;gap:4px;flex-wrap:wrap;align-items:center}
-nav a{text-decoration:none;color:var(--t);padding:8px 12px;border-radius:8px;font-size:15px;font-weight:500}
+nav a{text-decoration:none;color:var(--t);padding:8px 10px;border-radius:8px;font-size:15px;font-weight:500}
 nav a:hover{background:var(--bg);color:var(--c)}
 nav button{font:inherit;font-size:15px;font-weight:600;border:1px solid var(--c);color:var(--c);background:none;padding:7px 12px;border-radius:8px;margin-left:6px;cursor:pointer}
 nav button.on{background:var(--c);color:#fff}
@@ -84,7 +86,7 @@ footer{background:#3a0638;color:#ecd6e8;padding:34px 0;font-size:15px}footer a{c
 </head>
 <body>
 <header><div class="wrap bar">
-<a class="logo" href="#top"><img src="img/ns-logo.png?v=7" alt="MTÜ Nagu Sina" width="44" height="44"><span>KOMPASS<small>KOOLITUSKESKUS</small></span></a>
+<a class="logo" href="#top"><img src="img/ns-logo.png?v=7" alt="MTÜ Nagu Sina" width="44" height="44"><span>KOMPASS<small>KOOLITUSKESKUS</small><em><i data-i="org"></i><i data-i="org2"></i></em></span></a>
 <input type="checkbox" id="m"><label class="burger" for="m">☰</label>
 <nav>
 <a href="#kursused" data-i="n1"></a><a href="#kuidas" data-i="n4"></a><a href="#faq" data-i="n6"></a><a href="#docs" data-i="n5"></a><a href="#reg" data-i="n2"></a>
@@ -196,7 +198,7 @@ s3t:"Õpe",s3:"Teooria klassis Liimi 1 (osa kursustest ka Zoomis) ja praktika.",
 s4t:"Tunnistus",s4:"Test, praktika ja tunnistus. Aitame töö leidmisel.",
 fn:"Nimi",ph:"Telefon",em:"E-post",ms:"Küsimus (valikuline)",ag:"Nõustun isikuandmete töötlemisega registreerumise eesmärgil.",sb:"Saada avaldus",
 ok:"Aitäh! Avaldus on vastu võetud. Saatke ka avanenud e-kiri, siis vastame kiiremini.",er:"Viga. Helistage +372 5791 8599.",
-h:"akad. tundi",pl:"Liimi 1, Tallinn",ln:"Õppekeel: vene",rg:"Registreeru",pr:"Programm",tc:"Koolitajad:",pd:"Programm (PDF, ET/RU)",
+h:"akad. tundi",pl:"Liimi 1, Tallinn",ln:"Õppekeel: vene",rg:"Registreeru",pr:"Programm",org:"Koolitusi korraldab MTÜ Nagu Sina",org2:"Registrikood: 80600369",tc:"Koolitajad:",pd:"Programm (PDF, ET/RU)",
 i1t:"Õppekeskkond",i1:"Klassiruumid vastavad töötervishoiu nõuetele, kaasaegne esitlustehnika, paberkandjal jaotusmaterjal, internet igaühele, tee/kohvi paus igal õppepäeval.",
 i2t:"Tagastus",i2:"Õppetasu tagastatakse täielikult, kui loobute enne koolituse algust ja kulusid pole tekkinud. Pärast algust üldjuhul ei tagastata. Kui kursus jääb ära meie poolt, tagastame kogu summa 14 päeva jooksul.",
 i3t:"Väljaarvamine",i3:"Väljaarvamine on võimalik omal soovil, rikkumise või õppekava mittetäitmise korral. Otsuse teeb õppekeskuse juht.",
@@ -212,7 +214,7 @@ s3t:"Обучение",s3:"Теория в аудитории на Liimi 1 (ча
 s4t:"Свидетельство",s4:"Тест, практика и свидетельство. Помогаем с трудоустройством.",
 fn:"Имя",ph:"Телефон",em:"E-mail",ms:"Вопрос (необязательно)",ag:"Согласен на обработку персональных данных для целей регистрации.",sb:"Отправить заявку",
 ok:"Спасибо! Заявка принята. Отправьте и открывшееся письмо, так мы ответим быстрее.",er:"Ошибка. Позвоните +372 5791 8599.",
-h:"ак. часов",pl:"Liimi 1, Таллин",ln:"Язык обучения: русский",rg:"Записаться",pr:"Программа",tc:"Преподаватели:",pd:"Программа (PDF, ET/RU)",
+h:"ак. часов",pl:"Liimi 1, Таллин",ln:"Язык обучения: русский",rg:"Записаться",pr:"Программа",org:"Курсы организует MTÜ Nagu Sina",org2:"Рег. код: 80600369",tc:"Преподаватели:",pd:"Программа (PDF, ET/RU)",
 i1t:"Учебная среда",i1:"Аудитории соответствуют требованиям охраны труда, современная техника, раздаточные материалы на бумаге, интернет для каждого, перерыв на чай/кофе в каждый учебный день.",
 i2t:"Возврат",i2:"Стоимость возвращается полностью при отказе до начала курса, если расходов ещё не было. После начала, как правило, не возвращается. Если курс отменяем мы, вернём всю сумму в течение 14 дней.",
 i3t:"Отчисление",i3:"Отчисление возможно по собственному заявлению, при нарушениях или невыполнении программы. Решение принимает руководитель центра.",

@@ -232,7 +232,7 @@ document.querySelectorAll("[data-p]").forEach(e=>e.placeholder=t[e.dataset.p]);
 document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("on",b.dataset.l===L));
 document.getElementById("cl").innerHTML=C.map((c,k)=>{const x=c[L];return `<article class="card"><div class="ph"><img src="img/${P[k][0]}" alt="${esc(x[0])}" loading="lazy" style="object-position:${P[k][1]}"><em>${c.p} €</em></div><div class="pad"><h3><a href="/kursus/${c.id}/" style="color:inherit;text-decoration:none">${esc(x[0])}</a></h3><p>${esc(x[1])}</p>
 <div class="meta"><span>⏱ ${c.h} ${t.h}</span><span>📅 ${c.d}</span><span>📍 ${t.pl}${c.z?" / Zoom":""}</span></div>
-<details><summary>${t.pr}</summary><ul>${x[3].map(m=>`<li>${esc(m)}</li>`).join("")}</ul><p style="font-size:14px">${esc(x[2])}. ${esc(x[4])}</p>${c.t?`<p style="font-size:14px"><b>${t.tc}</b> ${esc(c.t[L])}</p>`:""}</details>
+
 <div class="row"><a class="btn" href="#reg" data-c="${c.id}">${t.rg}</a><a href="/kursus/${c.id}/">${t.pd}</a></div></div></article>`}).join("");
 document.querySelectorAll("[data-c]").forEach(a=>a.onclick=()=>{document.getElementById("sel").value=a.dataset.c});
 const s=document.getElementById("sel"),v=s.value;

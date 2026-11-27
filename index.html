@@ -192,7 +192,7 @@ s3t:"Õpe",s3:"Teooria klassis Liimi 1 (osa kursustest ka Zoomis) ja praktika.",
 s4t:"Tunnistus",s4:"Test, praktika ja tunnistus. Aitame töö leidmisel.",
 fn:"Nimi",ph:"Telefon",em:"E-post",ms:"Küsimus (valikuline)",ag:"Nõustun isikuandmete töötlemisega registreerumise eesmärgil.",sb:"Saada avaldus",
 ok:"Aitäh! Avaldus on vastu võetud. Saatke ka avanenud e-kiri, siis vastame kiiremini.",er:"Viga. Helistage +372 5791 8599.",
-h:"akad. tundi",pl:"Liimi 1, Tallinn",ln:"Õppekeel: vene",rg:"Registreeru",pr:"Programm",org:"Koolitusi korraldab MTÜ Nagu Sina",org2:"Registrikood: 80600369",tc:"Koolitajad:",pd:"Programm (PDF, ET/RU)",
+h:"akad. tundi",pl:"Liimi 1, Tallinn",ln:"Õppekeel: vene",rg:"Registreeru",pr:"Programm",org:"Koolitusi korraldab MTÜ Nagu Sina",org2:"Registrikood: 80600369",tc:"Koolitajad:",pd:"Vaata kursust lähemalt →",
 i1t:"Õppekeskkond",i1:"Klassiruumid vastavad töötervishoiu nõuetele, kaasaegne esitlustehnika, paberkandjal jaotusmaterjal, internet igaühele, tee/kohvi paus igal õppepäeval.",
 i2t:"Tagastus",i2:"Õppetasu tagastatakse täielikult, kui loobute enne koolituse algust ja kulusid pole tekkinud. Pärast algust üldjuhul ei tagastata. Kui kursus jääb ära meie poolt, tagastame kogu summa 14 päeva jooksul.",
 i3t:"Väljaarvamine",i3:"Väljaarvamine on võimalik omal soovil, rikkumise või õppekava mittetäitmise korral. Otsuse teeb õppekeskuse juht.",
@@ -208,7 +208,7 @@ s3t:"Обучение",s3:"Теория в аудитории на Liimi 1 (ча
 s4t:"Свидетельство",s4:"Тест, практика и свидетельство. Помогаем с трудоустройством.",
 fn:"Имя",ph:"Телефон",em:"E-mail",ms:"Вопрос (необязательно)",ag:"Согласен на обработку персональных данных для целей регистрации.",sb:"Отправить заявку",
 ok:"Спасибо! Заявка принята. Отправьте и открывшееся письмо, так мы ответим быстрее.",er:"Ошибка. Позвоните +372 5791 8599.",
-h:"ак. часов",pl:"Liimi 1, Таллин",ln:"Язык обучения: русский",rg:"Записаться",pr:"Программа",org:"Курсы организует MTÜ Nagu Sina",org2:"Рег. код: 80600369",tc:"Преподаватели:",pd:"Программа (PDF, ET/RU)",
+h:"ак. часов",pl:"Liimi 1, Таллин",ln:"Язык обучения: русский",rg:"Записаться",pr:"Программа",org:"Курсы организует MTÜ Nagu Sina",org2:"Рег. код: 80600369",tc:"Преподаватели:",pd:"Подробнее о курсе →",
 i1t:"Учебная среда",i1:"Аудитории соответствуют требованиям охраны труда, современная техника, раздаточные материалы на бумаге, интернет для каждого, перерыв на чай/кофе в каждый учебный день.",
 i2t:"Возврат",i2:"Стоимость возвращается полностью при отказе до начала курса, если расходов ещё не было. После начала, как правило, не возвращается. Если курс отменяем мы, вернём всю сумму в течение 14 дней.",
 i3t:"Отчисление",i3:"Отчисление возможно по собственному заявлению, при нарушениях или невыполнении программы. Решение принимает руководитель центра.",
@@ -230,10 +230,10 @@ function r(){const t=T[L];document.documentElement.lang=L;
 document.querySelectorAll("[data-i]").forEach(e=>e.textContent=t[e.dataset.i]);
 document.querySelectorAll("[data-p]").forEach(e=>e.placeholder=t[e.dataset.p]);
 document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("on",b.dataset.l===L));
-document.getElementById("cl").innerHTML=C.map((c,k)=>{const x=c[L];return `<article class="card"><div class="ph"><img src="img/${P[k][0]}" alt="${esc(x[0])}" loading="lazy" style="object-position:${P[k][1]}"><em>${c.p} €</em></div><div class="pad"><h3>${esc(x[0])}</h3><p>${esc(x[1])}</p>
+document.getElementById("cl").innerHTML=C.map((c,k)=>{const x=c[L];return `<article class="card"><div class="ph"><img src="img/${P[k][0]}" alt="${esc(x[0])}" loading="lazy" style="object-position:${P[k][1]}"><em>${c.p} €</em></div><div class="pad"><h3><a href="/kursus/${c.id}/" style="color:inherit;text-decoration:none">${esc(x[0])}</a></h3><p>${esc(x[1])}</p>
 <div class="meta"><span>⏱ ${c.h} ${t.h}</span><span>📅 ${c.d}</span><span>📍 ${t.pl}${c.z?" / Zoom":""}</span></div>
 <details><summary>${t.pr}</summary><ul>${x[3].map(m=>`<li>${esc(m)}</li>`).join("")}</ul><p style="font-size:14px">${esc(x[2])}. ${esc(x[4])}</p>${c.t?`<p style="font-size:14px"><b>${t.tc}</b> ${esc(c.t[L])}</p>`:""}</details>
-<div class="row"><a class="btn" href="#reg" data-c="${c.id}">${t.rg}</a><a href="docs/${c.pdf}" target="_blank" rel="noopener">${t.pd}</a></div></div></article>`}).join("");
+<div class="row"><a class="btn" href="#reg" data-c="${c.id}">${t.rg}</a><a href="/kursus/${c.id}/">${t.pd}</a></div></div></article>`}).join("");
 document.querySelectorAll("[data-c]").forEach(a=>a.onclick=()=>{document.getElementById("sel").value=a.dataset.c});
 const s=document.getElementById("sel"),v=s.value;
 s.innerHTML=C.map(c=>`<option value="${c.id}">${esc(c[L][0])} (${c.p} €)</option>`).join("");if(v)s.value=v;
@@ -252,6 +252,7 @@ const bd=(L==="et"?"Nimi":"Имя")+": "+d.name+"\n"+(L==="et"?"Telefon":"Тел
 location.href="mailto:kompasskool@gmail.com?subject="+encodeURIComponent(sb)+"&body="+encodeURIComponent(bd);
 e.target.reset()}catch(_){st.textContent=T[L].er}};
 r();
+try{const q=new URLSearchParams(location.search).get("kursus");if(q&&C.some(c=>c.id===q)){document.getElementById("sel").value=q}}catch(e){}
 </script>
 </body>
 </html>
